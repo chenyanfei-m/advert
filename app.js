@@ -14,7 +14,6 @@ const equipmentTypeDetection = (ua) => {
 }
 
 app.get('/getImg', (req, res) => {
-  console.log(req.headers['user-agent'])
   const userAgent = req.headers['user-agent']
   const equipmentType = equipmentTypeDetection(userAgent)
   const newInfoArr = imgArrInfo.randomImg.reduce((acc, { imgUrl, redirect, chance }, index, arr) => {
