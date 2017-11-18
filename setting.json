@@ -1,12 +1,21 @@
-[
-  {
-    "imgUrl": "http://c.hiphotos.baidu.com/image/pic/item/8601a18b87d6277ffc11acf221381f30e824fcfd.jpg",
-    "chance": 40,
-    "redirect": "http://www.baidu.com"
-  },
-  {
-    "imgUrl": "http://g.hiphotos.baidu.com/image/pic/item/0df3d7ca7bcb0a46f4dd8af36263f6246a60af78.jpg",
-    "chance": 60,
-    "redirect": ""
-  }
-]
+{
+  "randomImg": [
+    {
+      "imgUrl": "http://img.sccnn.com/bimg/339/29912.jpg",
+      "chance": 40,
+      "redirect": ""
+    },
+    {
+      "imgUrl": "http://jy.sccnn.com/zb_users/upload/2017/11/remoteimage2_20171115092522_19055.jpeg",
+      "chance": 60,
+      "redirect": ""
+    }
+  ],
+  "mobileHref": [
+    "https://itunes.apple.com/us/app/pandora-music/id284035177?mt=8&at=1000lGhT",
+    "https://itunes.apple.com/us/app/netflix/id363590051?mt=8&at=1000lGhT",
+    "https://itunes.apple.com/us/app/hbo-now-stream-tv-movies/id971265422?mt=8&at=1000lGhT",
+    "https://itunes.apple.com/us/app/tinder/id547702041?mt=8&at=1000lGhT",
+    "https://itunes.apple.com/us/app/candy-crush-saga/id553834731?mt=8&at=1000lGhT"
+  ]
+}
