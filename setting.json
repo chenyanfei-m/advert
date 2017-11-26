@@ -1,4 +1,13 @@
 {
+  "localAddress": "http://45.56.121.61:3000/",
+  "mobileImg": {
+    "url": "/img/mobileImg.jpg",
+    "wrapUrl": "http://global.jc.superlinkin.com/trace?offer_id=22866&aff_id=101324&app_id=241&clickid={CLICK_ID}&idfa={IDFA}"
+  },
+  "pcImg": {
+    "url": "/img/pcImg.jpg",
+    "wrapUrl": "http://global.jc.superlinkin.com/trace?offer_id=22866&aff_id=101324&app_id=241&clickid={CLICK_ID}&idfa={IDFA}"
+  },
   "randomImg": [
     {
       "imgUrl": "http://img.sccnn.com/bimg/339/29912.jpg",
