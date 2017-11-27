@@ -28,7 +28,7 @@ app.get('/getImg', (req, res) => {
   // const showImgRenderStr = ejs.render(template.showImg, { params: result.imgUrl === undefined ? [] : [result.imgUrl] }).replace(/\n/g, '')
   const isPc = equipmentType === 'pc'
   let showImgRenderStr = `<a target="_blank" href="${
-    imgArrInfo.localAddress + imgArrInfo[isPc ? 'pcImg' : 'mobileImg'].wrapUrl
+    imgArrInfo[isPc ? 'pcImg' : 'mobileImg'].wrapUrl
     }"><img src="${
     imgArrInfo.localAddress + imgArrInfo[isPc ? 'pcImg' : 'mobileImg'].url
     }"/></a>`
