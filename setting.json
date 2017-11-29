@@ -50,6 +50,7 @@
     "http://global.jc.superlinkin.com/trace?offer_id=22877&aff_id=101324&app_id=241&clickid={CLICK_ID}",
     "http://global.jc.superlinkin.com/trace?offer_id=22878&aff_id=101324&app_id=241&clickid={CLICK_ID}",
     "https://itunes.apple.com/cn/app/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80/id989673964?mt=8&at=1000lGhT",
-    "https://geo.itunes.apple.com/cn/album/%E5%9C%8B%E8%AA%9E%E7%9C%9F%E7%B6%93%E5%85%B8-%E7%8E%8B%E8%8F%B2/405896101?mt=1&app=music&at=1000lGhT&ct=9999"
+    "https://geo.itunes.apple.com/cn/album/%E5%9C%8B%E8%AA%9E%E7%9C%9F%E7%B6%93%E5%85%B8-%E7%8E%8B%E8%8F%B2/405896101?mt=1&app=music&at=1000lGhT&ct=9999",
+    "http://www.greatestapps.mobi/?sl=2428571-f0de8&data1=Track1&data2=Track2&tag={External_ID_from_traffic_source}&website={subID}&placement={sub_subID}"
   ]
 }
