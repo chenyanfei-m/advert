@@ -44,4 +44,4 @@ app.get('/getImg', (req, res) => {
   res.send(scriptContent)
 })
 
-app.listen(3000)
+app.listen(80)
