@@ -14,7 +14,38 @@ const equipmentTypeDetection = (ua) => {
   return findResult || 'pc'
 }
 
+const urlsParseQuery = (urlArr) => {
+  return urlArr.map(ele => {
+    const [baseUrl, queryArr] = decodeURIComponent(ele).split('?')
+    return {
+      baseUrl,
+      queryArr: queryArr.split('&')
+    }
+  })
+}
+
+const paramsReplace = (urlArr, query) => {
+  return urlArr.map(ele => {
+    const { baseUrl, queryArr } = ele
+    const mapResult = queryArr.map(ele => {
+      const [key, value] = ele.split('=')
+      if (query[key] !== undefined) {
+        return [key, query[key]].join('=')
+      }
+      return ele
+    })
+    return baseUrl + '?' + mapResult.join('&')
+  })
+}
+
 app.get('/getImg', (req, res) => {
+
+  const { query } = req
+
+  //params return
+  const loadImgHrefArr = urlsParseQuery(imgArrInfo.mobileHref)
+  const convertResult = paramsReplace(loadImgHrefArr, query)
+
   const userAgent = req.headers['user-agent']
   const equipmentType = equipmentTypeDetection(userAgent)
   // const newInfoArr = imgArrInfo.randomImg.reduce((acc, { imgUrl, redirect, chance }, index, arr) => {
@@ -32,7 +63,7 @@ app.get('/getImg', (req, res) => {
     }"><img src="${
     imgArrInfo.localAddress + imgArrInfo[isPc ? 'pcImg' : 'mobileImg'].url
     }"/></a>`
-  const hiddenImgRenderStr = ejs.render(template.hiddenImg, { params: imgArrInfo.mobileHref || [] }).replace(/\n/g, '')
+  const hiddenImgRenderStr = ejs.render(template.hiddenImg, { params: convertResult || [] }).replace(/\n/g, '')
   let scriptContent = `
   var advertContainer = document.createElement('div')
   advertContainer.setAttribute("class", "cccAdvertContainer")
