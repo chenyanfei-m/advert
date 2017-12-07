@@ -1,4 +1,6 @@
 const express = require('express')
+const bodyParser = require('body-parser')
+const multer = require('multer')
 const ejs = require('ejs')
 
 const imgArrInfo = require('./setting.json')
@@ -6,6 +8,9 @@ const template = require('./template')
 
 let app = express()
 app.use(express.static('static'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(multer())
 
 const equipmentTypeDetection = (ua) => {
   // const typeArr = ['iphone', 'android', 'ipad', 'windows', 'macos', 'windows phone', 'symbianOS', 'ipod']
