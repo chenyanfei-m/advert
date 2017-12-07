@@ -2,11 +2,11 @@
   "localAddress": "http://45.56.121.61:3000",
   "mobileImg": {
     "url": "/img/mobileImg.jpg",
-    "wrapUrl": "https://itunes.apple.com/cn/app/id458318329?mt=8&at=1000lGhT&ct=qq"
+    "wrapUrl": "http://www.baidu.com"
   },
   "pcImg": {
     "url": "/img/pcImg.jpg",
-    "wrapUrl": "https://itunes.apple.com/cn/app/id458318329?mt=8&at=1000lGhT&ct=qq"
+    "wrapUrl": "http://www.baidu.com"
   },
   "randomImg": [
     {
