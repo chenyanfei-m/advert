@@ -5,7 +5,7 @@ module.exports = {
         app: {
           type: 'dateFile',
           filename: 'log/access.log',
-          daysToKeep: 30
+          daysToKeep: 7
         }
       },
     logger: 'access',
