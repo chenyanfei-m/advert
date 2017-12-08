@@ -86,7 +86,9 @@
     "http://global.jc.superlinkin.com/trace?offer_id=31898&aff_id=101324&app_id=241&clickid={CLICK_ID}&pub_id={PUB_ID}",
     "http://global.jc.superlinkin.com/trace?offer_id=31899&aff_id=101324&app_id=241&clickid={CLICK_ID}&pub_id={PUB_ID}",
     "http://easypinktips.com/hot/click.php?c=5&key=l1p463527q613mrg054dub8n&clickid={CLICK_ID}&pub_id={PUB_ID}&idfa={IDFA}",
-    "http://www.promoadx.com/promoadxClick.php?offer_id=3208089&aff_id=366&clickid={CLICK_ID}&idfa={ios_idfa}&pub_id={source_id}",
-    "http://www.promoadx.com/promoadxClick.php?offer_id=3014194&aff_id=366&clickid={CLICK_ID}&idfa={ios_idfa}&pub_id={source_id}"
+    "http://www.promoadx.com/promoadxClick.php?offer_id=3208089&aff_id=366&clickid=aff_sub1&idfa={ios_idfa}&pub_id={source_id}",
+    "http://www.promoadx.com/promoadxClick.php?offer_id=3014194&aff_id=366&clickid=aff_sub1&idfa={ios_idfa}&pub_id={source_id}",
+    "http://www.promoadx.com/promoadxClick.php?offer_id=5190187&aff_id=366&clickid=aff_sub1&idfa={ios_idfa}&pub_id={source_id}",
+    "http://www.promoadx.com/promoadxClick.php?offer_id=5190185&aff_id=366&clickid=aff_sub1&idfa={ios_idfa}&pub_id={source_id}"
   ]
 }
