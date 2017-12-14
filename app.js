@@ -7,6 +7,8 @@ const { log } = require('./config.js')
 const imgArrInfo = require('./setting.json')
 const template = require('./template')
 
+const Mask = require('./routes/mask')
+
 log4js.configure({
   appenders: log.appenders,
   categories: log.categories
@@ -87,5 +89,7 @@ app.get('/getImg', (req, res) => {
   `
   res.send(scriptContent)
 })
+
+Mask(app)
 
 app.listen(3000)
