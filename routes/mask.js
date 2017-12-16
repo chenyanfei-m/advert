@@ -30,10 +30,10 @@ module.exports = (app) => {
     console.log(renderStr)
     res.send(
       `
-      var maskContainer = document.createElement('div');
+      var advertContainer = document.createElement('div');
       var body = document.getElementsByTagName('body')[0];
-      body.appendChild(maskContainer);
-      maskContainer.innerHTML = '${renderStr}';
+      body.appendChild(advertContainer);
+      advertContainer.innerHTML = '${renderStr}';
       ${equipmentType !== 'pc' ? `var mask = document.getElementById('mask-lksdjflksjfiodsjfjsf');
       var width = window.innerWidth;
       var height = window.innerHeight;
