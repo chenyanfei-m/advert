@@ -22,7 +22,7 @@ module.exports = (app) => {
       }
     }).replace(/\n/g, '')
     let renderStr
-    if (equipmentType === 'pc') {
+    if (equipmentType === 'pc' && config.mask.maskStatus) {
       renderStr = imgRenderStr
     } else {
       renderStr = aRenderStr + imgRenderStr
@@ -34,7 +34,7 @@ module.exports = (app) => {
       var body = document.getElementsByTagName('body')[0];
       body.appendChild(advertContainer);
       advertContainer.innerHTML = '${renderStr}';
-      ${equipmentType !== 'pc' ? `var mask = document.getElementById('mask-lksdjflksjfiodsjfjsf');
+      ${equipmentType !== 'pc' && config.mask.maskStatus ? `var mask = document.getElementById('mask-lksdjflksjfiodsjfjsf');
       var width = window.innerWidth;
       var height = window.innerHeight;
       mask.style.width = width + 'px';

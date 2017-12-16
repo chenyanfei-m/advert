@@ -3,7 +3,8 @@
   "mask": {
     "href": "http://www.baidu.com",
     "imgHref": "/img/mobileImg.jpg",
-    "imgWrapHref": "http://www.baidu.com"
+    "imgWrapHref": "http://www.baidu.com",
+    "maskStatus": 1
   },
   "mobileImg": {
     "url": "/img/mobileImg.jpg",
