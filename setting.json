@@ -1,6 +1,10 @@
 {
   "localAddress": "http://45.56.121.61:3000",
-  "maskHref": "http://www.baidu.com",
+  "mask": {
+    "href": "http://www.baidu.com",
+    "imgHref": "/img/mobileImg.jpg",
+    "imgWrapHref": "http://www.baidu.com"
+  },
   "mobileImg": {
     "url": "/img/mobileImg.jpg",
     "wrapUrl": "http://www.baidu.com"
