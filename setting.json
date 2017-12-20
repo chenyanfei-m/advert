@@ -4,7 +4,7 @@
     "href": "http://www.baidu.com",
     "imgHref": "/img/mobileImg.jpg",
     "imgWrapHref": "http://www.baidu.com",
-    "maskStatus": 1
+    "maskStatus": 0
   },
   "mobileImg": {
     "url": "/img/mobileImg.jpg",
