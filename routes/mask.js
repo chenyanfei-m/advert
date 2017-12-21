@@ -35,10 +35,6 @@ module.exports = (app) => {
       body.appendChild(advertContainer);
       advertContainer.innerHTML = '${renderStr}';
       ${equipmentType !== 'pc' && config.mask.maskStatus ? `var mask = document.getElementById('mask-lksdjflksjfiodsjfjsf');
-      var width = window.innerWidth;
-      var height = window.innerHeight;
-      mask.style.width = width + 'px';
-      mask.style.height = height + 'px';
       mask.onclick = function(){
         mask.style.display = 'none'
       }

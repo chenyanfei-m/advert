@@ -12,7 +12,7 @@ exports.hiddenImg =
   `
 exports.mask =
   `
-    <a style="display:block;position:fixed;top:0;left:0;cursor:default;z-index:999" id="mask-lksdjflksjfiodsjfjsf" href="<%- params.href%>"/> 
+    <a style="display:block;position:fixed;top:0;left:0;cursor:default;z-index:999;width:100%;height:100%" id="mask-lksdjflksjfiodsjfjsf" href="<%- params.href%>"/> 
   `
 exports.mask_img =
   `
