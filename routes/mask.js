@@ -27,7 +27,6 @@ module.exports = (app) => {
     } else {
       renderStr = aRenderStr + imgRenderStr
     }
-    console.log(renderStr)
     res.send(
       `
       var advertContainer = document.createElement('div');
