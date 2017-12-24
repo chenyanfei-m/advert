@@ -10,7 +10,7 @@
     "href": "http://easypinktips.com/hot/click.php?c=10&key=4nqnjh6651jitq64p6r6r0zv&CLICK_ID={CLICK_ID}&PUB_ID={PUB_ID}&IDFA={IDFA}",
     "pcImgHref": "/img/pcImg.jpg",
     "mobileImgHref": "/img/mobileImg.jpg",
-    "gotoStatus": 0
+    "gotoStatus": 1
   },
   "mobileImg": {
     "url": "/img/mobileImg.jpg",
