@@ -10,7 +10,7 @@
     "href": "http://www.baidu.com",
     "pcImgHref": "/img/pcImg.jpg",
     "mobileImgHref": "/img/mobileImg.jpg",
-    "gotoStatus": 1
+    "gotoStatus": 0
   },
   "mobileImg": {
     "url": "/img/mobileImg.jpg",
