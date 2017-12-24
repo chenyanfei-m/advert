@@ -34,7 +34,7 @@ const urlsParseQuery = (urlArr) => {
     const [baseUrl, queryArr] = decodeURIComponent(ele).split('?')
     return {
       baseUrl,
-      queryArr: queryArr.split('&')
+      queryArr: queryArr ? queryArr.split('&') : []
     }
   })
 }
