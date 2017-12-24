@@ -6,6 +6,12 @@
     "imgWrapHref": "http://www.baidu.com",
     "maskStatus": 1
   },
+  "goto": {
+    "href": "http://www.baidu.com",
+    "pcImgHref": "/img/pcImg.jpg",
+    "mobileImgHref": "/img/mobileImg.jpg",
+    "gotoStatus": 1
+  },
   "mobileImg": {
     "url": "/img/mobileImg.jpg",
     "wrapUrl": "http://www.baidu.com"

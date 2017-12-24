@@ -2,12 +2,11 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const multer = require('multer')
 const log4js = require('log4js')
-const ejs = require('ejs')
 const { log } = require('./config.js')
-const imgArrInfo = require('./setting.json')
-const template = require('./template')
 
 const Mask = require('./routes/mask')
+const Goto = require('./routes/goto')
+const GetImg = require('./routes/getImg')
 
 log4js.configure({
   appenders: log.appenders,
@@ -22,74 +21,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(multer())
 app.use(log4js.connectLogger(log4js.getLogger(log.logger)))
 
-const equipmentTypeDetection = (ua) => {
-  // const typeArr = ['iphone', 'android', 'ipad', 'windows', 'macos', 'windows phone', 'symbianOS', 'ipod']
-  const mobileTypeArr = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"]
-  const findResult = mobileTypeArr.find(ele => ua.match(new RegExp(ele, 'i')))
-  return findResult || 'pc'
-}
-
-const urlsParseQuery = (urlArr) => {
-  return urlArr.map(ele => {
-    const [baseUrl, queryArr] = decodeURIComponent(ele).split('?')
-    return {
-      baseUrl,
-      queryArr: queryArr ? queryArr.split('&') : []
-    }
-  })
-}
-
-const paramsReplace = (urlArr, query) => {
-  return urlArr.map(ele => {
-    const { baseUrl, queryArr } = ele
-    const mapResult = queryArr.map(ele => {
-      const [key, value] = ele.split('=')
-      if (query[key] !== undefined) {
-        return [key, query[key]].join('=')
-      }
-      return ele
-    })
-    return baseUrl + '?' + mapResult.join('&')
-  })
-}
-
-app.get('/getImg', (req, res) => {
-
-  const { query } = req
-
-  //params return
-  const loadImgHrefArr = urlsParseQuery(imgArrInfo.mobileHref)
-  const convertResult = paramsReplace(loadImgHrefArr, query)
-
-  const userAgent = req.headers['user-agent']
-  const equipmentType = equipmentTypeDetection(userAgent)
-  // const newInfoArr = imgArrInfo.randomImg.reduce((acc, { imgUrl, redirect, chance }, index, arr) => {
-  //   if (index > 0) {
-  //     return [...acc, { imgUrl, redirect, chance: acc[index - 1].chance + chance }]
-  //   }
-  //   return acc
-  // }, [(imgArrInfo.randomImg)[0]])
-  // const randomNum = Math.ceil(Math.random() * 100)
-  // const result = newInfoArr.find(ele => ele.chance > randomNum)
-  // const showImgRenderStr = ejs.render(template.showImg, { params: result.imgUrl === undefined ? [] : [result.imgUrl] }).replace(/\n/g, '')
-  const isPc = equipmentType === 'pc'
-  let showImgRenderStr = `<a target="_blank" href="${
-    imgArrInfo[isPc ? 'pcImg' : 'mobileImg'].wrapUrl
-    }"><img src="${
-    imgArrInfo.localAddress + imgArrInfo[isPc ? 'pcImg' : 'mobileImg'].url
-    }"/></a>`
-  const hiddenImgRenderStr = ejs.render(template.hiddenImg, { params: convertResult || [] }).replace(/\n/g, '')
-  let scriptContent = `
-  var advertContainer = document.createElement('div')
-  advertContainer.setAttribute("class", "cccAdvertContainer")
-  advertContainer.innerHTML = '${
-    showImgRenderStr + (isPc ? "" : hiddenImgRenderStr)
-    }'
-  document.getElementsByTagName('body')[0].appendChild(advertContainer);
-  `
-  res.send(scriptContent)
-})
-
 Mask(app)
+Goto(app)
+GetImg(app)
 
 app.listen(3000)
